@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+#main {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+  padding-right: 10px;
+}
+
+li img {
+  border: 1px solid gray;
+  padding: 5px;
+  width: 18vmin;
+}
+
+img:hover {
+  border-color: red;
+}
+
+#largeImg {
+  border: 1px solid gray;
+  padding: 5px;
+  width: 100vmin;
+}
