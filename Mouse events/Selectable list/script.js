@@ -3,23 +3,21 @@ window.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', e => {
             if(!e.target.dataset.li)
                 return;
-            if(count < 1){
-                e.target.setAttribute('class', 'colored');
-                count++;
-            } else {
-                const colored = document.querySelector('.colored');
-                colored.classList.remove('colored');
-                e.target.setAttribute('class', 'colored');
-            }
             if(e.ctrlKey){
-                if(e.target.classList.contains('colored')){
-                    const colored = document.querySelector('.colored');
-                    colored.classList.remove('colored');
-                    count = 0;
-                } else {
+                if(!e.target.classList.contains('colored')){
                     e.target.setAttribute('class', 'colored');
+                } else if(e.target.classList.contains('colored')){
+                    e.target.removeAttribute('class')
+                }
+            } else {
+                const list = document.querySelectorAll('li');
+            for (const li of list) {
+                if(li.classList.contains('colored')){
+                    li.removeAttribute('class');
                 }
             }
-            
+            e.target.setAttribute('class', 'colored');
+            }
         })
 }); 
+
