@@ -20,12 +20,13 @@ h1 {
   border: 2px solid black;
   border-radius: 5px;
   position: relative;
-
   overflow: hidden;
+  cursor: pointer;
 }
 
 #ball {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 0.5s;
 }
